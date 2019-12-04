@@ -1,0 +1,149 @@
+/* general reset*/
+body, body *{
+    margin:             unset;
+    box-sizing:         unset;
+    padding:            unset;
+    font-size:          unset;
+    color:              unset;
+    text-decoration:    unset;
+}
+/* css variables*/
+:root {
+    --logo_color: #2525e5;
+    --burgerbtncolor: #2525e5;
+}
+/* header bar positon, color and size*/
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: black;
+    height: 9vh;
+}
+
+/* Logo shit */
+.logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* The Logo sizing and some positioning*/
+.logo img {
+    height: 7vh;
+    margin: 1vh 0vw;
+    margin-right: 5vw;
+}
+
+/* The side navigation menu */
+.sidemenu {
+    height: 100vh; /* 100% Full-height */
+    width: 0vw; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: -1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    background-color: rgb(0, 0, 0); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    right: 0; /* Sidemenu on to the rigth */
+    display: flex; /* To be able to put content in the middle verticaly*/
+    align-items: center; 
+}
+
+.sidemenuwidth {
+    width: 100vw;
+}
+
+/* Style of the links*/
+.sidemenu a {
+    padding: 2vh;
+    margin: 1vh 0vh;
+    text-decoration: none;
+    font-size: 3vh;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #d3d3d3;
+    display: block;
+    transition: 0.3s;
+    border-left: 2vw solid var(--logo_color);
+    width: 100vw;
+    background-color: rgb(37, 37, 37);
+}
+
+/* hover change color*/
+.sidemenu a:hover {
+    color: var(--logo_color)
+}
+
+/*Hamburger placement*/
+#burgerbtn {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    background: #000000;
+    width: 6.5vh;
+    height: 6.2vh;
+    border-radius: 3.5vh 0vh 0vh 3.5vh;
+    transform: translate(0, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.8s;
+}
+
+/* Burgerbutton border normal color*/
+.blackborder {
+    border: 0.4vh solid black;
+    border-right: solid black;
+}
+/* positioning of lower and higher line*/
+.blackborder div:before,
+.blackborder div:after {
+    top: -1.3vh;
+}
+
+/* Moves lower bar down*/
+.blackborder div:after {
+    top: 1.3vh;
+}
+
+/* Burgerbutton border color when menu open + animation for burger*/
+.blueborder {
+    border: 0.4vh solid var(--burgerbtncolor);
+    border-right: solid black;
+}
+.blueborder div {
+    transform: rotate(135deg);
+    background-color: black;
+}
+.blueborder div:before,
+.blueborder div:after {
+    top: 0vh;
+    transform: rotate(90deg);
+}
+
+/* middle bar style*/
+#burgerbtn div{
+    border: none;
+    position: relative;
+    left: 0.3vh;
+    width: 4vh;
+    height: 0.5vh;
+    background-color: var(--burgerbtncolor);
+    transition: 0.4s;
+}
+
+/* top and bottom style*/
+#burgerbtn div:before,
+#burgerbtn div:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 4vh;
+    height: 0.5vh;
+    background-color: var(--burgerbtncolor);
+    transition: 0.4s;
+}
+
+
+
