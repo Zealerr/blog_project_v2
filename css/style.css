@@ -46,16 +46,17 @@ nav {
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
     right: 0; /* Sidemenu on to the rigth */
     display: flex; /* To be able to put content in the middle verticaly*/
-    align-items: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 .sidemenuwidth {
     width: 100vw;
 }
 
+
 /* Style of the links*/
 .sidemenu a {
-    padding: 2vh;
     margin: 1vh 0vh;
     text-decoration: none;
     font-size: 3vh;
@@ -63,16 +64,22 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     color: #d3d3d3;
     display: block;
-    transition: 0.3s;
-    border-left: 2vw solid var(--logo_color);
-    width: 100vw;
-    background-color: rgb(37, 37, 37);
+    transition: 0.6s;
+    border-left: 1vw solid var(--logo_color);
+    border-right: 1vw solid var(--logo_color);
+    width: 98vw;
+    height: 7vh;
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* hover change color*/
 .sidemenu a:hover {
     color: var(--logo_color)
 }
+
 
 /*Hamburger placement*/
 #burgerbtn {
@@ -145,5 +152,14 @@ nav {
     transition: 0.4s;
 }
 
+.closed ul{
+    display: none;
+}
 
+.open ul{
+    display: block;
+}
 
+i {
+    margin: 0vh 2vw;
+}
