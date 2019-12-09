@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,52 +11,74 @@
     <script src="js/sidemenu.js"></script>
     <title>Project Blue Serpent</title>
 </head>
-<body>
-    <nav id="nav">
-            <div class="logo">
-                    <a href="index.html">
-                        <img src="img/logo_blue_black_v2.png" alt="">
-                    </a>
-                </div>
-        
-        <div id="mysidemenu" class="sidemenu">
 
-                <ul>
-                    <li><a href="#!" >HOME</a></li>
-                    <li id="dropdown1"class=" closed">
-                        <a onclick="openDropdown()"href="#!" >BLOG<i id="fafa" class="fa fa-caret-down" aria-hidden="true"></i>
-                        </a>
-                        <ul class="nav-dropdown">
-                            <li id="dropdown2">
-                                <a onclick="openDropdown1()" href="#!">PROJECT 1 <i id="fafa1" class="fa fa-caret-down" aria-hidden="true"></i>
-                                </a>
-                                <ul class="nav-dropdown">
-                                    <li><a href="!#">update 1</a></li>
-                                </ul>
-                            </li>    
-                        </ul>
-                    </li>
-                    <li><a href="#!" >CONTACT</a></li>
-                
-                </ul>
+<body>
+    <div class="pagewrapper">
+        <nav id="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo_blue_black_v2.png" alt="">
+                </a>
             </div>
-    </nav>
-    <div id="burgerbtn" class="blackborder" onclick="openMenu()"><div></div></div>
-    
-    <ul class="slideshow">
-        <li></li>
-        <li></li>
-    </ul>
-    
-    <article id="about">
-        <p class="title">About</p>
-        <p>
-            My name is Felix Rosenberg and I am currently an IT-student learning a mix of front- and backend programming with passion for rogue-like pixel games. This will be my platform where i post updates about my projects.
-        </p>
-    </article>
-    
-    <footer>
-        <p class="logoclr">BLUE SERPENT</p><p>By Felix Rosenberg</p>
-    </footer>
+
+            <div id="sideMenu" class="sidemenu">
+                <div id="item-container" class="item-container">
+                    <div class="item">
+                        <a href="#!">Home</a>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" id="B">
+                        <label for="B">Projects</label>
+                        <ul>
+                            <li>
+                                <div class="sub-item">
+                                    <input type="checkbox" id="B-A">
+                                    <label for="B-A">Lito - Pixel animations</label>
+                                    <ul>
+                                        <li><a href="#">Update 1</a></li>
+                                        <li><a href="#">Update 2</a></li>
+                                        <li><a href="#">Update 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sub-item">
+                                    <input type="checkbox" id="B-B">
+                                    <label for="B-B">Shadow Dash - Pixel game</label>
+                                    <ul>
+                                        <li><a href="#">Update 1</a></li>
+                                        <li><a href="#">Update 2</a></li>
+                                        <li><a href="#">Update 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="burgerbtn" class="blackborder" onclick="openMenu()">
+            <div></div>
+        </div>
+
+        <ul class="slideshow">
+            <li></li>
+        </ul>
+
+        <article id="about">
+            <p class="title">About</p>
+            <p>
+                My name is Felix Rosenberg and I am currently an IT-student learning a mix of front- and backend
+                programming with passion for rogue-like pixel games. This will be my platform where i post updates about
+                my projects.
+            </p>
+        </article>
+
+        <footer>
+            <p class="logoclr">BLUE SERPENT</p>
+            <p>By Felix Rosenberg</p>
+        </footer>
+    </div>
 </body>
+
 </html>

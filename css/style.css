@@ -1,16 +1,22 @@
 /* general reset*/
-body, body *{
-    margin:             unset;
-    box-sizing:         unset;
-    padding:            unset;
-    font-size:          unset;
-    color:              unset;
-    text-decoration:    unset;
+
+body, body * {
+    margin: unset;
+    box-sizing: unset;
+    padding: unset;
+    font-size: unset;
+    color: white;
+    text-decoration: unset;
 }
+
 body {
     background-color: #282828;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
 /* css variables*/
+
 :root {
     --logo_color: #2525e5;
     --burgerbtncolor: #2525e5;
@@ -18,11 +24,19 @@ body {
 }
 
 /* smooth scrolling*/
+
 html {
     scroll-behavior: smooth;
 }
 
+.pagewrapper {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    min-height: 100vh;
+}
+
 /* header bar positon, color and size*/
+
 nav {
     position: fixed;
     width: 100%;
@@ -32,6 +46,7 @@ nav {
 }
 
 /* Logo shit */
+
 .logo {
     width: 100%;
     display: flex;
@@ -39,6 +54,7 @@ nav {
 }
 
 /* The Logo sizing and some positioning*/
+
 .logo img {
     height: 7vh;
     margin: 1vh 0vw;
@@ -46,53 +62,105 @@ nav {
 }
 
 /* The side navigation menu */
+
 .sidemenu {
-    height: 100vh; /* 100% Full-height */
-    width: 0vw; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: -1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    background-color: rgb(0, 0, 0); /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    right: 0; /* Sidemenu on to the rigth */
-    display: flex; /* To be able to put content in the middle verticaly*/
+    height: 100vh;
+    /* 100% Full-height */
+    width: 0vw;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: -1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    background-color: rgb(0, 0, 0);
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+    right: 0;
+    display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .sidemenuwidth {
     width: 100vw;
 }
 
+/* dropdown funtionality */
 
-/* Style of the links*/
-.sidemenu a {
-    margin: 1vh 0vh;
-    text-decoration: none;
-    font-size: 3vh;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #d3d3d3;
+.item ul {
+    display: none;
+}
+.item input:checked~ul {
     display: block;
-    transition: 0.6s;
-    border-left: 1vw solid var(--logo_color);
-    border-right: 1vw solid var(--logo_color);
-    width: 98vw;
-    height: 7vh;
-    background-color: rgb(22, 22, 22);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.item input {
+    display: none;
 }
 
-/* hover change color*/
-.sidemenu a:hover {
-    color: var(--logo_color)
+/* Styling of dropdown and dropdown items*/
+
+.item-container {
+    width: 100%;
+    opacity: 0;
+    transition: 0.25s ease-in-out;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+.item a {
+    margin-top: 1vh ;
+    width: 100%;
+    background-color: #202020;
+    display: block;
+    z-index: 3;
+    position: relative;
+    line-height: 6vh;
+    padding-left: 5vw;
+    
+    border-left: 1px solid var(--logo_color);
+}
+
+.item label {
+    margin-top: 1vh ;
+    width: 100%;
+    background-color: #202020;
+    display: block;
+    z-index: 3;
+    position: relative;
+    line-height: 6vh;
+    padding-left: 5vw;
+    border-left: 1px solid var(--logo_color);
+}
+
+.sub-item label, .sub-item a {
+    padding-left: 15vw;
+    margin-top: 0;
+}
+
+.sub-item li a {
+    margin-top: 0;
+    padding-left: 25vw;
+}
+
+.sidemenu li {
+    background-color: #202020;
+    line-height: 6vh;
+    position: relative;
+}
+
+.sidemenu li {
+    list-style: none;
 }
 
 
 /*Hamburger placement*/
+
 #burgerbtn {
     cursor: pointer;
     position: fixed;
@@ -111,38 +179,44 @@ nav {
 }
 
 /* Burgerbutton border normal color*/
+
 .blackborder {
     border: 0.4vh solid black;
     border-right: solid black;
 }
+
 /* positioning of lower and higher line*/
-.blackborder div:before,
-.blackborder div:after {
+
+.blackborder div:before, .blackborder div:after {
     top: -1.3vh;
 }
 
 /* Moves lower bar down*/
+
 .blackborder div:after {
     top: 1.3vh;
 }
 
 /* Burgerbutton border color when menu open + animation for burger*/
+
 .blueborder {
     border: 0.4vh solid var(--burgerbtncolor);
     border-right: solid black;
 }
+
 .blueborder div {
     transform: rotate(135deg);
     background-color: black;
 }
-.blueborder div:before,
-.blueborder div:after {
+
+.blueborder div:before, .blueborder div:after {
     top: 0vh;
     transform: rotate(90deg);
 }
 
 /* middle bar style*/
-#burgerbtn div{
+
+#burgerbtn div {
     border: none;
     position: relative;
     left: 0.3vh;
@@ -153,8 +227,8 @@ nav {
 }
 
 /* top and bottom style*/
-#burgerbtn div:before,
-#burgerbtn div:after {
+
+#burgerbtn div:before, #burgerbtn div:after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -165,14 +239,17 @@ nav {
 }
 
 /* Classes for dropdown menu opened or closed */
-.closed ul{
+
+.closed ul {
     display: none;
 }
-.open ul{
+
+.open ul {
     display: block;
 }
 
 /* Dropdown arrow placement*/
+
 i {
     margin: 0vh 2vw;
 }
@@ -180,6 +257,7 @@ i {
 /* Text articles/blogposts style */
 
 /* article gridsystem */
+
 article {
     display: grid;
     grid-template-columns: 1fr 2cm [start] 3cm 12cm 3cm [end] 2cm 1fr;
@@ -190,14 +268,16 @@ article {
     border-radius: 2vw;
     height: 30vh;
 }
-article *{
+
+article * {
     grid-column: start / end;
 }
 
 /* Mobile styling with media querries*/
+
 @media (max-width: 22cm) {
     article {
-        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;   
+        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
     }
     :root {
         font-size: 2vh;
@@ -205,14 +285,40 @@ article *{
 }
 
 /* Specific styling of general text types*/
-h2, p {    margin-bottom: 2.4rem; }
 
-h1           { font: 700 1.5rem/1.2 "Helvetica"; color: hsl(000, 0%, 12%); }
-h2           { font: 400 1.2rem/1.2 "Helvetica"; color: hsl(000, 0%, 40%); }
-time         { font: 400 1.0rem/1.2 "Helvetica"; color: hsl(000, 0%, 12%); }
-h3           { font: 700 1.0rem/1.2 "Helvetica"; color: hsl(000, 0%, 12%); }
-p            { font: 400 1.0rem/1.5 "Helvetica"; color: rgb(148, 148, 148); }
-figcaption p { font: 400 1.0rem/1.5 "Helvetica"; color: hsl(000, 0%, 50%); }
+h2, p {
+    margin-bottom: 2.4rem;
+}
+
+h1 {
+    font: 700 1.5rem/1.2 "Helvetica";
+    color: hsl(000, 0%, 12%);
+}
+
+h2 {
+    font: 400 1.2rem/1.2 "Helvetica";
+    color: hsl(000, 0%, 40%);
+}
+
+time {
+    font: 400 1.0rem/1.2 "Helvetica";
+    color: hsl(000, 0%, 12%);
+}
+
+h3 {
+    font: 700 1.0rem/1.2 "Helvetica";
+    color: hsl(000, 0%, 12%);
+}
+
+p {
+    font: 400 1.0rem/1.5 "Helvetica";
+    color: rgb(148, 148, 148);
+}
+
+figcaption p {
+    font: 400 1.0rem/1.5 "Helvetica";
+    color: hsl(000, 0%, 50%);
+}
 
 .title {
     text-align: center;
@@ -233,16 +339,29 @@ figcaption p { font: 400 1.0rem/1.5 "Helvetica"; color: hsl(000, 0%, 50%); }
 /* blogpost picture styling*/
 
 /* placemnet of picture depending on size */
-.size-1 { grid-column: 4/5; }
-.size-2 { grid-column: 3/6; }
-.size-3 { grid-column: 2/7; }
-.size-4 { grid-column: 1/8; }
+
+.size-1 {
+    grid-column: 4/5;
+}
+
+.size-2 {
+    grid-column: 3/6;
+}
+
+.size-3 {
+    grid-column: 2/7;
+}
+
+.size-4 {
+    grid-column: 1/8;
+}
 
 .size-1 img, .size-2 img, .size-3 img, .size-4 img {
-    width:      100%;
+    width: 100%;
 }
 
 /* picture caption placement*/
+
 figcaption {
     margin-top: 0.5rem;
     display: flex;
@@ -267,6 +386,5 @@ footer p {
 
 .logoclr {
     color: var(--logo_color);
-    font-weight: 700;
     margin-right: 2vw;
 }
