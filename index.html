@@ -21,23 +21,40 @@
 
                 <ul>
                     <li><a href="#!" >HOME</a></li>
-                    <li><a href="#!" >ABOUT</a></li>
-                    <li id="dropdown"class=" closed">
+                    <li id="dropdown1"class=" closed">
                         <a onclick="openDropdown()"href="#!" >BLOG<i id="fafa" class="fa fa-caret-down" aria-hidden="true"></i>
                         </a>
                         <ul class="nav-dropdown">
-                                <li><a href="#!">UPDATE 1</a></li>
-                                <li><a href="#">UPDATE 2</a></li>
-                                <li><a href="#">UPDATE 3</a></li>
+                            <li id="dropdown2">
+                                <a onclick="openDropdown1()" href="#!">PROJECT 1 <i id="fafa1" class="fa fa-caret-down" aria-hidden="true"></i>
+                                </a>
+                                <ul class="nav-dropdown">
+                                    <li><a href="!#">update 1</a></li>
+                                </ul>
+                            </li>    
                         </ul>
                     </li>
-                    <li><a href="#!" >GAMES</a></li>
                     <li><a href="#!" >CONTACT</a></li>
                 
                 </ul>
             </div>
     </nav>
     <div id="burgerbtn" class="blackborder" onclick="openMenu()"><div></div></div>
-
+    
+    <ul class="slideshow">
+        <li></li>
+        <li></li>
+    </ul>
+    
+    <article id="about">
+        <p class="title">About</p>
+        <p>
+            My name is Felix Rosenberg and I am currently an IT-student learning a mix of front- and backend programming with passion for rogue-like pixel games. This will be my platform where i post updates about my projects.
+        </p>
+    </article>
+    
+    <footer>
+        <p class="logoclr">BLUE SERPENT</p><p>By Felix Rosenberg</p>
+    </footer>
 </body>
 </html>

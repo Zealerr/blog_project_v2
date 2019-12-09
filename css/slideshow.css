@@ -1,0 +1,36 @@
+.slideshow {
+    padding-top: 9vh;
+    list-style-type: none;
+}
+
+.slideshow,
+.slideshow:after { 
+    top: -16px;
+    width: 100vw;
+    height: 26vh;
+    left: 0px;
+    z-index: 0;
+}
+
+.slideshow li {
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    z-index: 0;
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: url("../img/Bamboo-arena.png"); 
+}
+
+@keyframes imageAnimation { 
+    0% { display: block; opacity: 0; animation-timing-function: ease-in; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0; display: none;}
+}
