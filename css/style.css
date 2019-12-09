@@ -10,7 +10,7 @@ body, body * {
 }
 
 body {
-    background-color: #282828;
+    background-color: var(--backgrndClr);
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -21,6 +21,8 @@ body {
     --logo_color: #2525e5;
     --burgerbtncolor: #2525e5;
     --blogpostcolor: #202020;
+    --sideMenuItemClr: #202020;
+    --backgrndClr: #181818;
 }
 
 /* smooth scrolling*/
@@ -30,9 +32,14 @@ html {
 }
 
 .pagewrapper {
-    display: grid;
-    grid-template-rows: auto auto auto auto;
+    width: 100%;
     min-height: 100vh;
+    display: grid;
+    grid-template-rows: 9vh auto 7vh;
+    grid-template-areas: 
+    "nav"
+    "content"
+    "footer";
 }
 
 /* header bar positon, color and size*/
@@ -43,6 +50,12 @@ nav {
     background-color: black;
     height: 9vh;
     z-index: 1;
+    grid-row: nav;
+}
+
+/* Content placement*/
+.content {
+    grid-row: content;
 }
 
 /* Logo shit */
@@ -107,6 +120,7 @@ nav {
     width: 100%;
     opacity: 0;
     transition: 0.25s ease-in-out;
+    font-size: 2vh;
 }
 
 label:hover {
@@ -116,26 +130,26 @@ label:hover {
 .item a {
     margin-top: 1vh ;
     width: 100%;
-    background-color: #202020;
+    background-color: var(--sideMenuItemClr);
     display: block;
     z-index: 3;
     position: relative;
     line-height: 6vh;
     padding-left: 5vw;
     
-    border-left: 1px solid var(--logo_color);
+    border-left: 0.4vh solid var(--logo_color);
 }
 
 .item label {
     margin-top: 1vh ;
     width: 100%;
-    background-color: #202020;
+    background-color: var(--sideMenuItemClr);
     display: block;
     z-index: 3;
     position: relative;
     line-height: 6vh;
     padding-left: 5vw;
-    border-left: 1px solid var(--logo_color);
+    border-left: 0.4vh solid var(--logo_color);
 }
 
 .sub-item label, .sub-item a {
@@ -261,12 +275,12 @@ i {
 article {
     display: grid;
     grid-template-columns: 1fr 2cm [start] 3cm 12cm 3cm [end] 2cm 1fr;
-    padding: 12vh 0;
+    padding-bottom: 4vh;
     background-color: var(--blogpostcolor);
     width: 90vw;
-    margin: 5vw 5vw;
+    margin: 5vw 5vw 5vw 5vw;
     border-radius: 2vw;
-    height: 30vh;
+    height: auto;
 }
 
 article * {
@@ -287,12 +301,12 @@ article * {
 /* Specific styling of general text types*/
 
 h2, p {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.2rem;
 }
 
 h1 {
     font: 700 1.5rem/1.2 "Helvetica";
-    color: hsl(000, 0%, 12%);
+    color: rgb(146, 146, 146);
 }
 
 h2 {
@@ -317,14 +331,16 @@ p {
 
 figcaption p {
     font: 400 1.0rem/1.5 "Helvetica";
-    color: hsl(000, 0%, 50%);
+    color: rgb(172, 103, 0);
 }
 
 .title {
+    margin-top: 1.2rem;
     text-align: center;
     font-size: 4vh;
     font: 900;
     text-transform: uppercase;
+    color: #7a7a7a;
 }
 
 .article-end-line {
@@ -367,24 +383,38 @@ figcaption {
     display: flex;
     justify-content: center;
 }
+/* frontpage slideshow stuff*/
+.slideshow {
+    height: auto;
+    list-style-type: none;
+}
+.slideshow li{
+    background-image: url(../img/Bamboo-arena.png);
+    height: 27vh;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
 
+
+/* footer styling and placement*/
 footer {
+    grid-row: footer;
     width: 100%;
     background-color: black;
     height: 7vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 footer p {
-    margin: 3vh 0vh;
+    width: 100%;
     font-size: 2vh;
     color: grey;
     display: block;
+    line-height: 7vh;
+    text-align: center;
 }
 
-.logoclr {
+footer span {
     color: var(--logo_color);
-    margin-right: 2vw;
 }
