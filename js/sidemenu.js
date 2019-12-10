@@ -8,7 +8,7 @@ function openMenu() {
     } else {
         itemContInvi();
         window.setTimeout(sideMenuClose, 500);
-        window.setTimeout(burgerbtnOff, 500);   
+        window.setTimeout(burgerbtnOff, 500);
         x = 0;
     }
 }
@@ -35,4 +35,39 @@ function itemContShow() {
 
 function itemContInvi() {
     document.getElementById("item-container").style.opacity = "0"
+}
+
+var y1 = 0;
+var y2 = 0;
+var y3 = 0;
+function sideMenufafa(letter) {
+    if (letter == 'B') {
+        if (y1 == 0) {
+            document.getElementById("fafa-B").setAttribute("class", "fa fa-caret-up");
+            y1 = 1;
+        } else {
+            document.getElementById("fafa-B").setAttribute("class", "fa fa-caret-down");
+            y1 = 0;
+        }
+    }
+    
+    if (letter == 'B-A') {
+        if (y2 == 0) {
+            document.getElementById("fafa-B-A").setAttribute("class", "fa fa-caret-up");
+            y2 = 1;
+        } else {
+            document.getElementById("fafa-B-A").setAttribute("class", "fa fa-caret-down");
+            y2 = 0;
+        }
+    }
+
+    if (letter == 'B-B') {
+        if (y3 == 0) {
+            document.getElementById("fafa-B-B").setAttribute("class", "fa fa-caret-up");
+            y3 = 1;
+        } else {
+            document.getElementById("fafa-B-B").setAttribute("class", "fa fa-caret-down");
+            y3 = 0;
+        }
+    }
 }
