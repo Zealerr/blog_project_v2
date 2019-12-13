@@ -3,12 +3,12 @@ function openMenu() {
     if (x == 0) {
         sideMenuOpen();
         burgerbtnOn();
-        window.setTimeout(itemContShow, 500);
-        x = 1;
+        window.setTimeout(itemContShow, 300);
+        x= 1;
     } else {
         itemContInvi();
-        window.setTimeout(sideMenuClose, 500);
-        window.setTimeout(burgerbtnOff, 500);
+        window.setTimeout(sideMenuClose, 300);
+        window.setTimeout(burgerbtnOff, 300);
         x = 0;
     }
 }
@@ -69,5 +69,15 @@ function sideMenufafa(letter) {
             document.getElementById("fafa-B-B").setAttribute("class", "fa fa-caret-down");
             y3 = 0;
         }
+    }
+}
+var isjpg = 0;
+function litoGif() {
+    if (isjpg == 0) {
+        document.getElementById("litorun").setAttribute("src", "../../img/Lito_run_right_gif.gif");
+        isjpg = 1;
+    } else {
+        document.getElementById("litorun").setAttribute("src", "../../img/Lito_run_right_jpg.png");
+        isjpg = 0;
     }
 }

@@ -23,6 +23,7 @@ body {
     --blogpostcolor: #202020;
     --sideMenuItemClr: #202020;
     --backgrndClr: #181818;
+    font-size: 2vh;
 }
 
 /* smooth scrolling*/
@@ -57,6 +58,7 @@ nav {
 .content {
     grid-row: content;
 }
+
 
 /* Logo shit */
 
@@ -274,8 +276,7 @@ i {
 
 article {
     display: grid;
-    grid-template-columns: 1fr 2cm [start] 3cm 12cm 3cm [end] 2cm 1fr;
-    padding-bottom: 4vh;
+    grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
     background-color: var(--blogpostcolor);
     width: 90vw;
     margin: 5vw 5vw 5vw 5vw;
@@ -287,17 +288,6 @@ article * {
     grid-column: start / end;
 }
 
-/* Mobile styling with media querries*/
-
-@media (orientation: portrait) {
-    article {
-        grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr;
-    }
-    :root {
-        font-size: 2vh;
-    }
-}
-
 /* Specific styling of general text types*/
 
 h2, p {
@@ -305,6 +295,7 @@ h2, p {
 }
 
 h1 {
+    margin-top: 1rem;
     font: 700 1.5rem/1.2 "Helvetica";
     color: rgb(146, 146, 146);
 }
@@ -316,12 +307,12 @@ h2 {
 
 time {
     font: 400 1.0rem/1.2 "Helvetica";
-    color: hsl(000, 0%, 12%);
+    color: rgb(172, 103, 0);
 }
 
 h3 {
-    font: 700 1.0rem/1.2 "Helvetica";
-    color: hsl(000, 0%, 12%);
+    font: 700 1.2rem/1.2 "Helvetica";
+    color: #7a7a7a;
 }
 
 p {
@@ -334,12 +325,33 @@ figcaption p {
     color: rgb(172, 103, 0);
 }
 
+strong {
+    color: rgb(172, 103, 0);
+}
+
+p a {
+    color: purple;
+    text-decoration: underline;
+}
+
+.gallery {
+    width: 100%;
+    height: auto;
+    border-top: 2px solid grey;
+    padding: 2vw 0 2vw 0;
+}
+.gallery img {
+    margin: 1vw 0 1vw 0
+}
+
+.img-g { width: 100%; grid-area: img1; }
+
 .title {
     margin-top: 1.2rem;
     text-align: center;
     font-size: 4vh;
     font: 900;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #7a7a7a;
 }
 

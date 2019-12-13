@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../../js/functionality.js"></script>
+    <link rel="icon" type="image" href="../../favico.ico">
+    <title>Project Lito - Idle animations</title>
+</head>
+
+<body>
+    <div class="pagewrapper">
+        <nav id="nav">
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../../img/logo_blue_black_v2.png" alt="">
+                </a>
+            </div>
+
+            <div id="sideMenu" class="sidemenu">
+                <div id="item-container" class="item-container">
+                    <div class="item">
+                        <a href="../../index.html">Home</a>
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" onclick="sideMenufafa('B')" id="B">
+                        <label for="B">Projects <i id="fafa-B" class="fa fa-caret-down"></i></label>
+                        <ul>
+                            <li>
+                                <div class="sub-item">
+                                    <input type="checkbox" onclick="sideMenufafa('B-A')" id="B-A">
+                                    <label for="B-A">Lito - Pixel animations<i id="fafa-B-A"
+                                            class="fa fa-caret-down"></i></label>
+                                    <ul>
+                                        <li><a href="animations.html">Animations</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="sub-item">
+                                    <input type="checkbox" onclick="sideMenufafa('B-B')" id="B-B">
+                                    <label for="B-B">Shadow Dash - Pixel game<i id="fafa-B-B"
+                                            class="fa fa-caret-down"></i></label>
+                                    <ul>
+                                        <li><a href="#">Update 1</a></li>
+                                        <li><a href="#">Update 2</a></li>
+                                        <li><a href="#">Update 3</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="burgerbtn" class="blackborder" onclick="openMenu()">
+            <div></div>
+        </div>
+        <div class="content">
+            <figure></figure>
+            <article>
+                <h1>Lito - Animations</h1>
+                <h2>Animation in four directions</h2>
+
+                <time datetime="21-09-2019">11-Dec-2019</time>
+                <p>When I first started off this project I did not have any animations in mind. I only began to doodle a
+                    little and soon found myself loving the little character I had created. I moved over to my computer
+                    and quickly threw together the concept art you see below. I had recently played the amazing
+                    metroidvania Hollow Knight as well as the mobile game Soul Knight. Both of these games and probably
+                    many had influence on the look of my character.
+                    I gave my character the name Lito because he is little and the opposite of light.
+                </p>
+                <figure class="size-2">
+                    <img src="../../img/Lito-concept-art.png" alt="concep art of the character 'Lito'">
+                    <figcaption>
+                        <p>Lito - First concept art</p>
+                    </figcaption>
+                </figure>
+                <p>After the digital concept art was done I moved over to making a pixel version of Lito. When I create
+                    a pixel version of a character always make the art as if it would later be used in a game. This is
+                    just something I do because of my dream to create my own pixel game. That is why the image below
+                    shows Lito in four directions for a top-down game perspective.</p>
+                <figure class="size-2">
+                    <img src="../../img/Lito-first-pixel-concept.png" alt="Pixel concept art of the character 'Lito'">
+                    <figcaption>
+                        <p>Pixel Lito in four directions</p>
+                    </figcaption>
+                </figure>
+                <p>This was my first time doing pixel art and I was happy with the first look. However I did think it
+                    was good enough and I later made improvements to the character when I began animating him. Side
+                    note: Some of my friends have said Lito looks like a jawa from the Star Wars Episode IV and others
+                    think of the game Journey.</p>
+                <p>Animating pixel art was completely new for me as well. Therefore I decided to get help by looking at
+                    how others had created their animations. I also somewhat followed the structure of the running
+                    animation in <a
+                        href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F55%2Fd0%2Fa7%2F55d0a7fa9d937546f4703159d7c46820.png&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F789326272163794175%2F&tbnid=awf082avCmHyOM&vet=12ahUKEwiFk5-33q3mAhVI6CoKHRWbAjsQMygAegUIARDQAQ..i&docid=1IHkpivgl5CNVM&w=384&h=128&q=hyper%20light%20drifter%20running%20animation&ved=2ahUKEwiFk5-33q3mAhVI6CoKHRWbAjsQMygAegUIARDQAQ">this</a>
+                    image. I specifically looked at the number of frames and the movement of the character. The
+                    animations are really well made in the game Hyper Light Drifter and so I often used them as
+                    reference and for inspiration.</p>
+                <figure class="size-1 ">
+                    <img id="litorun" onclick="litoGif()" src="../../img/Lito_run_right_jpg.png" alt="">
+                    <figcaption><p>Lito - Running animation</p></figcaption>
+                </figure>
+                <p>All together I created over a hundred sprites, several running animations and even idle animation in all four directions. I did all of this in photoshop and due to it now being that pixel art friendly I am now going over to <a href="https://www.aseprite.org/">Aseprite</a> for all future projects.</p>
+                <h3>Gallery</h3>
+                <div class="gallery">
+                    <img class="img-g" src="../../img/Lito-concept-art.png" alt="">
+                    <img class="img-g" src="../../img/Lito-first-pixel-concept.png" alt="">
+                    <img class="img-g" src="../../img/Lito-old-new-version.png" alt="">
+                    <img class="img-g" src="../../img/Lito-run-four-dir.PNG" alt="">
+                </div>
+            </article>
+        </div>
+        <footer>
+            <p><span>BLUE SERPENT</span> By Felix Rosenberg</p>
+        </footer>
+    </div>
+</body>
+
+</html>
