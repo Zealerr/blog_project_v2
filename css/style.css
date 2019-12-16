@@ -46,10 +46,7 @@ html {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 9vh auto 7vh;
-    grid-template-areas: 
-    "nav"
-    "content"
-    "footer";
+    grid-template-areas: "nav" "content" "footer";
 }
 
 /* header bar positon, color and size*/
@@ -64,10 +61,10 @@ nav {
 }
 
 /* Content placement*/
+
 .content {
     grid-row: content;
 }
-
 
 /* Logo shit */
 
@@ -118,9 +115,11 @@ nav {
 .item ul {
     display: none;
 }
+
 .item input:checked~ul {
     display: block;
 }
+
 .item input {
     display: none;
 }
@@ -139,7 +138,7 @@ label:hover {
 }
 
 .item a {
-    margin-top: 1vh ;
+    margin-top: 1vh;
     width: 100%;
     background-color: var(--sideMenuItemClr);
     display: block;
@@ -147,12 +146,11 @@ label:hover {
     position: relative;
     line-height: 6vh;
     padding-left: 5vw;
-    
     border-left: 0.4vh solid var(--logo_color);
 }
 
 .item label {
-    margin-top: 1vh ;
+    margin-top: 1vh;
     width: 100%;
     background-color: var(--sideMenuItemClr);
     display: block;
@@ -182,7 +180,6 @@ label:hover {
 .sidemenu li {
     list-style: none;
 }
-
 
 /*Hamburger placement*/
 
@@ -354,12 +351,14 @@ p a:hover {
     border-top: 2px solid var(--paragrafclr);
     padding: 2vw 0 2vw 0;
 }
+
 .gallery img {
     margin: 1vw 0 1vw 0
 }
 
-.img-g { 
-    width: 100%; grid-area: img1; 
+.img-g {
+    width: 100%;
+    grid-area: img1;
 }
 
 .title {
@@ -411,12 +410,15 @@ figcaption {
     display: flex;
     justify-content: center;
 }
+
 /* frontpage slideshow stuff*/
+
 .slideshow {
     height: auto;
     list-style-type: none;
 }
-.slideshow li{
+
+.slideshow li {
     background-image: url(../img/pexels-photo-270360.jpeg);
     height: 27vh;
     background-size: cover;
@@ -424,8 +426,8 @@ figcaption {
     background-repeat: no-repeat;
 }
 
-
 /* footer styling and placement*/
+
 footer {
     grid-row: footer;
     width: 100%;
@@ -445,4 +447,62 @@ footer p {
 
 footer span {
     color: var(--logo_color);
+}
+
+/* Desktop adapted styling */
+
+@media (min-width: 1000px) {
+    /*article sizing and placement*/
+    :root {
+        font-size: 1.8vh;
+    }
+    article {
+        width: auto;
+        margin: 4vh 0vw 0vh 0vw;
+        border-radius: 0.5vw;
+        grid-column: start / end;
+        padding-bottom: 3vh;
+    }
+    .content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr [start] 45vw [end] 10vw 1fr;
+    }
+    /*sidemenu desktop styling*/
+    .sidemenu {
+        height: 0vh;
+        width: 30vw;
+        overflow: hidden;
+    }
+    .sidemenuwidth {
+        width: 30vw;
+        height: 100vh;
+    }
+    .item label, .item a {
+        padding-left: 1.5vw;
+    }
+    .sub-item label {
+        padding-left: 4vw;
+    }
+    .sub-item li a {
+        padding-left: 8vw;
+    }
+    /*Logo placement*/
+    .logo {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr [start] 45vw [end] 10vw 1fr;
+    }
+    .logo a {
+        grid-column: start / end;
+    }
+    /*burgerbtn placement*/
+    #burgerbtn {
+        top: 4.5vh;
+        right: 30vw;
+    }
+    /* footer margin-top thingy*/
+    footer {
+        margin-top: 4vh;
+    }
 }
