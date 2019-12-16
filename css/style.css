@@ -102,8 +102,6 @@ nav {
     transition: 0.5s;
     /* 0.5 second transition effect to slide in the sidenav */
     right: 0;
-    display: flex;
-    align-items: center;
 }
 
 .sidemenuwidth {
@@ -112,12 +110,15 @@ nav {
 
 /* dropdown funtionality */
 
-.item ul {
-    display: none;
+.item ul, .sub-item ul {
+    overflow: hidden;
+    height: 0;
+    transition: 0.3s ease-in-out;
 }
 
-.item input:checked~ul {
-    display: block;
+.item input:checked~ul, .sub-item input:checked~ul {
+    overflow: visible;
+    height: 6vh;
 }
 
 .item input {
@@ -127,6 +128,7 @@ nav {
 /* Styling of dropdown and dropdown items*/
 
 .item-container {
+    margin-top: 43.6vh;
     width: 100%;
     opacity: 0;
     transition: 0.25s ease-in-out;
@@ -451,7 +453,7 @@ footer span {
 
 /* Desktop adapted styling */
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
     /*article sizing and placement*/
     :root {
         font-size: 1.8vh;
