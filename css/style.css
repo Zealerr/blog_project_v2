@@ -3,7 +3,7 @@
 body, body * {
     margin: unset;
     box-sizing: unset;
-    padding: unset;
+    padding: 0;
     font-size: unset;
     color: white;
     text-decoration: unset;
@@ -79,7 +79,7 @@ nav {
 .logo img {
     height: 7vh;
     margin: 1vh 0vw;
-    margin-right: 5vw;
+    margin-right: 1vh;
 }
 
 /* The side navigation menu */
@@ -277,6 +277,64 @@ label:hover {
 i {
     margin: 0vh 2vw;
 }
+/*Homepage scrolldown arrow styling*/
+@keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    5.55556% {
+      transform: translateY(0);
+    }
+    11.11111% {
+      transform: translateY(0);
+    }
+    22.22222% {
+      transform: translateY(-15px);
+    }
+    27.77778% {
+      transform: translateY(0);
+    }
+    33.33333% {
+      transform: translateY(-15px);
+    }
+    44.44444% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+.bounce {
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation: bounce 3.6s ease infinite;
+    transform-origin: 50% 50%;
+}
+.scrollDownArrow {
+    position: absolute;
+    top: 80vh;
+    opacity: 90%;
+    left: 50%;
+}
+.scrollDownArrow img {
+    width: 10vh;
+    margin-left: -5vh;
+}
+
+/*Homepage top gallery styling */
+.top-gallery {
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    grid-column: 1/5;
+}
+.gallery-cell img{
+    margin: 0;
+    width: 100vw;
+    height: 92vh;
+    object-fit: cover;
+}
+
 
 /* Text articles/blogposts style */
 
@@ -451,9 +509,11 @@ footer span {
     color: var(--logo_color);
 }
 
+
+
 /* Desktop adapted styling */
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     /*article sizing and placement*/
     :root {
         font-size: 1.8vh;
