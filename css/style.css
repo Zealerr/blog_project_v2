@@ -41,6 +41,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* whole page grid - general template*/
 .pagewrapper {
     width: 100%;
     min-height: 100vh;
@@ -49,8 +50,8 @@ html {
     grid-template-areas: "nav" "content" "footer";
 }
 
-/* header bar positon, color and size*/
 
+/* header bar positon, color and size*/
 nav {
     position: fixed;
     width: 100%;
