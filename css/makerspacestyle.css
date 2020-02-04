@@ -411,6 +411,10 @@ nav {
 }
 
 /* kontakt styling */
+.contact-specific {
+    background-color: unset;
+    background-image: url(../img/img_makerspace/nti_makerspace_img1.PNG);
+}
 
 .header {
     margin-left: 5vw;
@@ -434,60 +438,88 @@ h2 {
     padding-left: 5vw;
 }
 
-label, form input {
-    color: black;
+label {
+    color: rgb(255, 255, 255);
     font-size: 2vh;
+}
+
+form input {
+    color: black;
 }
 
 form {
     font-size: 1.5vh;
     line-height: 5vw;
-    color: rgb(71, 71, 71);
+    color: rgb(246, 246, 246);
 }
 
 .message, .subject, .mail, .name {
     margin-left: 5vw;
     width: 90vw;
-    background-color: #d8d8d8;
+    background-color: rgba(221, 8, 144, 0.5);
 }
 
-input[type=radio] {
-    height: 3vw;
-    width: 3vw;
-    background-color: white;
-    border: none;
-    margin: 0vw 0vw 1vw 5vw
+.blop {
+    display: flex;
 }
+
+.button {
+    margin-left: 5vw;
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+    border: solid white 3px;
+    width: 36.25vw;
+    text-align: center;
+    height: 4vh;
+    line-height: 4vh;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: white;
+}
+
+.button:hover span {
+    color: var(--nti-color-magenta);
+}
+
 
 input[type=text] {
+    resize: horizontal;
     height: 4vh;
-    width: 80vw;
+    line-height: 4vh;
+    width: 78vw;
     margin-left: 5vw;
     margin-bottom: 5vw;
     border: solid 1px var(--nti-color-violet);
 }
 
+input[type=text] {
+    padding-left: 2vw;
+    font-size: 1.5vh;
+}
+
 input[type=submit] {
-    width: 20vw;
-    height: 3vh;
-    background-color: var(--nti-color-violet);
+    width: 30vw;
+    height: 4vh;
+    background-color: rgba(221, 8, 144, 0);
     border: none;
-    margin-left: 5vw;
+    margin-left: 30vw;
     font-size: 2vh;
+    border: solid 3px white;
 }
 
 .submit {
     margin-left: 5vw;
     width: 90vw;
     height: 6vh;
-    background-color: #d8d8d8;
+    background-color: rgba(221, 8, 144, 0.5);
+    padding-bottom: 3vh;
+    padding-top: 1vh;
 }
 
-form label {
-    color: rgb(71, 71, 71);
-    font-size: 1.5vh;
-    margin-left: 0vw;
-}
+
+
 
 /* footer styling and placement*/
 
@@ -504,3 +536,4 @@ footer img {
     height: 7vh;
     margin-top: 2vh;
 }
+

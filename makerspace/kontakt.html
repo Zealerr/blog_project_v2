@@ -14,7 +14,8 @@
 <body>
     <div class="pagewrapper">
         <nav>
-            <div class="logo"><a href="index.html"><img src="../img/img_makerspace/Kopia-av-makerspace.png" alt=""></a></div>
+            <div class="logo"><a href="index.html"><img src="../img/img_makerspace/Kopia-av-makerspace.png" alt=""></a>
+            </div>
 
         </nav>
         <div id="menu" class="menu">
@@ -36,7 +37,7 @@
         <div id="burgerbtn" class="burgerbtn menuClosed closed" onclick="menuFunctionality()">
             <div></div>
         </div>
-        <div class="content">
+        <div class="content contact-specific">
             <div class="form">
                 <div class="header">
                     <h2>Kontakt</h2>
@@ -44,9 +45,11 @@
                 <div class="subject">
                     <label for="">Ämne</label>
                     <form>
-                        <input type="radio" id="yeet" name="subject" value="Önskemål"><label for="yeet">Önskemål</label>
-                        <input type="radio" id="beet" name="subject" value="Anmäl fel"><label for="beet">Anmäl fel</label>
-                        <input type="text" name="subject" placeholder="Annat">
+                        <div class="blop">
+                            <div class="button"><span>Önskemål</span></div>
+                            <div class="button"><span>Anmäl Fel</span></div>
+                        </div>
+                        <input type="text" placeholder="Ditt ämne...">
                     </form>
                 </div>
                 <div class="message">
@@ -62,7 +65,7 @@
                     </form>
                 </div>
                 <div class="mail">
-                    <label for="">E-post</label>
+                    <label for="">Din e-post</label>
                     <form>
                         <input type="text" placeholder="Din e-post">
                     </form>
